@@ -24,10 +24,10 @@ namespace CalculadoraIMC
                 double pesot = double.Parse(txtPeso.Text);
                 double alturat = double.Parse(txtAltura.Text);
 
-                double result = (alturat * alturat) / pesot;
+                double result = pesot / (alturat * alturat);
 
 
-                txtResultado.Text = result.ToString();
+                txtResultado.Text = Math.Round(result,2).ToString();
 
                 if (result < 18.5)
                 {
